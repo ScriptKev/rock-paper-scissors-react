@@ -1,25 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+import PxHeader from './components/PxHeader';
+import PxWrapper from './components/PxWrapper';
+import PxTable from './components/PxTable';
+
+const AppStyled = styled.main`
+  font-family: 'Barlow Semi Condensed';
+  min-height: 100vh;
+  padding: 2em;
+  color: white;
+  background: radial-gradient(circle, #1F3757 0%, #111f43 100%);
+`
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppStyled>
+      <PxWrapper>
+        <PxHeader />
+        <PxTable />
+      </PxWrapper>
+    </AppStyled>
   );
 }
 
